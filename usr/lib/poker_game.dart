@@ -33,17 +33,8 @@ class PlayingCard {
   Color get color {
     return (suit == Suit.hearts || suit == Suit.diamonds) ? Colors.red : Colors.black;
   }
-
-  IconData get suitIcon {
-    switch (suit) {
-      case Suit.spades: return Icons.spades; // Note: Standard material icons might not have filled suits perfectly, using closest
-      case Suit.hearts: return Icons.favorite;
-      case Suit.diamonds: return Icons.diamond;
-      case Suit.clubs: return Icons.circle; // Placeholder if specific icon missing, but usually available
-    }
-  }
   
-  // Helper for better suit display if using text
+  // Helper for better suit display using text/emoji characters
   String get suitSymbol {
     switch (suit) {
       case Suit.spades: return '♠';
