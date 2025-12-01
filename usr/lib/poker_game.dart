@@ -305,10 +305,23 @@ class _PokerGameScreenState extends State<PokerGameScreen> {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  const CircleAvatar(
-                    radius: 30,
-                    backgroundColor: Colors.grey,
-                    child: Icon(Icons.person, size: 40, color: Colors.white),
+                  Container(
+                    decoration: BoxDecoration(
+                      shape: BoxShape.circle,
+                      border: Border.all(color: Colors.amber, width: 2),
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.black.withOpacity(0.5),
+                          blurRadius: 4,
+                          offset: const Offset(0, 2),
+                        ),
+                      ],
+                    ),
+                    child: const CircleAvatar(
+                      radius: 30,
+                      backgroundColor: Color(0xFF263238), // Dark Blue Grey
+                      child: Icon(Icons.smart_toy, size: 36, color: Colors.cyanAccent),
+                    ),
                   ),
                   const SizedBox(height: 8),
                   const Text("对手 (Opponent)", style: TextStyle(color: Colors.white70)),
